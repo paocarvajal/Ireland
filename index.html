@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Irish Island Adventure: A Comprehensive Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f7f6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, rgba(0, 70, 67, 1) 0%, rgba(0, 100, 66, 1) 100%);
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .status-btn {
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .status-pending { background-color: #fef3c7; color: #92400e; border-color: #fde68a; }
+        .status-process { background-color: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+        .status-done { background-color: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+        .task-item.done { text-decoration: line-through; color: #6b7280; }
+        .roadmap-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .roadmap-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: #abd1c6;
+        }
+        .roadmap-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #004643;
+            border: 4px solid #f9bc60;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        details > summary {
+            cursor: pointer;
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="header-gradient text-white p-8 text-center rounded-b-3xl shadow-lg relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1200x400/004643/FFFFFF?text=Welcome+to+Your+Future');"></div>
+        <div class="relative">
+            <h1 class="text-4xl md:text-6xl font-bold mb-2">Our Irish Island Adventure</h1>
+            <p class="text-lg md:text-xl text-gray-200">A detailed, actionable plan for our move to one of Ireland's beautiful offshore islands.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- 1. The 'Our Living Islands' Policy Deep Dive -->
+        <section id="about" class="section-card p-8 mb-8">
+            <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">The 'Our Living Islands' Policy: A Deep Dive</h2>
+            <p class="mb-4">This 10-year government strategy is designed to boost life on approximately 30 offshore, non-bridged islands. Notable examples include <strong class="text-emerald-700">Arranmore</strong> (Co. Donegal), <strong class="text-emerald-700">Clare Island</strong> (Co. Mayo), and <strong class="text-emerald-700">Inis Mór</strong> (one of the Aran Islands). The core of the plan for us is the grant system:</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="font-bold text-xl text-green-800">Vacant Property Grant: Up to €60,000</h3>
+                    <p class="text-sm">This is the base grant. To qualify, you must buy a home that was built before 2008 and has been vacant for at least two years.</p>
+                </div>
+                <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                    <h3 class="font-bold text-xl text-amber-800">Derelict Property Top-Up: Up to €24,000</h3>
+                    <p class="text-sm">If the property is confirmed to be structurally unsound and dangerous (derelict), you can get this additional amount, bringing the potential total to €84,000.</p>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="font-semibold text-lg mb-2">What the Grant Covers:</h3>
+                <p>The money is for major works to make the house habitable, not for decoration. Think:</p>
+                <ul class="list-disc list-inside space-y-1 mt-2 pl-4">
+                    <li>Structural repairs (roof, walls, foundations)</li>
+                    <li>Insulation and damp-proofing</li>
+                    <li>Plumbing, sewerage, and electrical work</li>
+                    <li>Window and door replacement</li>
+                </ul>
+            </div>
+             <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+                <h3 class="font-bold text-blue-800">Crucial Caveat</h3>
+                <p class="text-blue-700">You must own the property before applying. The grant is paid out in stages after you've paid contractors and submitted receipts. This means you need significant capital upfront for both the purchase and the initial renovation phases.</p>
+            </div>
+        </section>
+
+        <!-- 2. The Path to Residency: A Detailed Breakdown -->
+        <section id="residency" class="section-card p-8 mb-8">
+             <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">Path to Residency: A Detailed Breakdown</h2>
+             <div class="grid md:grid-cols-2 gap-8">
+                 <!-- German Citizen -->
+                 <div>
+                     <h3 class="text-2xl font-semibold mb-2 text-blue-800 flex items-center"><i data-lucide="shield-check" class="w-6 h-6 mr-2"></i>For the German Citizen</h3>
+                     <p class="mb-3">As an EU citizen, your right to live and work in Ireland is protected by EU freedom of movement. Your path is straightforward.</p>
+                     <strong class="block">Key Steps Post-Arrival:</strong>
+                     <ul class="list-disc list-inside mt-2 space-y-1">
+                         <li><strong>No visa required.</strong></li>
+                         <li>After 90 days, you should be engaged in work or study to establish residency formally.</li>
+                         <li>Apply for a <strong class="font-semibold">Personal Public Service (PPS) Number</strong>, which is essential for taxes, services, and employment.</li>
+                         <li>Open an Irish bank account.</li>
+                     </ul>
+                 </div>
+                 <!-- Mexican Citizen -->
+                 <div>
+                     <h3 class="text-2xl font-semibold mb-2 text-red-800 flex items-center"><i data-lucide="alert-triangle" class="w-6 h-6 mr-2"></i>For the Mexican Citizen</h3>
+                     <p class="mb-3">This is the primary hurdle. You must secure a long-stay visa independently. The property grant offers <strong class="underline">no support</strong> for this. An immigration lawyer is non-negotiable.</p>
+                     
+                     <details class="mt-4 border rounded-lg p-3">
+                        <summary class="font-semibold flex justify-between items-center">
+                            Option 1: Critical Skills Employment Permit
+                            <i data-lucide="chevron-down" class="arrow-down transition-transform"></i>
+                        </summary>
+                        <div class="mt-2 text-sm">
+                            <p>This is the most common route. It's for professionals in high-demand fields.</p>
+                            <p class="font-bold mt-1">Requirements:</p>
+                            <ul class="list-disc list-inside pl-2">
+                                <li>A confirmed 2-year job offer from an Irish company.</li>
+                                <li>The role must be on the <a href="#" class="text-blue-600 underline">Critical Skills Occupations List</a> (e.g., IT, Engineering, Finance, Health).</li>
+                                <li>Minimum annual salary of €38,000 or more, depending on the role.</li>
+                            </ul>
+                        </div>
+                     </details>
+
+                     <details class="mt-2 border rounded-lg p-3">
+                        <summary class="font-semibold flex justify-between items-center">
+                            Option 2: Start-up Entrepreneur Programme (STEP)
+                            <i data-lucide="chevron-down" class="arrow-down transition-transform"></i>
+                        </summary>
+                        <div class="mt-2 text-sm">
+                            <p>For individuals with an innovative business idea.</p>
+                             <p class="font-bold mt-1">Requirements:</p>
+                            <ul class="list-disc list-inside pl-2">
+                                <li>A detailed, high-potential business plan.</li>
+                                <li>Access to <strong class="font-bold">€50,000</strong> in secured funding.</li>
+                                <li>The business must be innovative and capable of creating 10 jobs in Ireland.</li>
+                            </ul>
+                        </div>
+                     </details>
+                     
+                      <p class="mt-4 text-sm text-gray-600"><strong>Note:</strong> The Immigrant Investor Programme (IIP) was closed in 2023 and is no longer an option.</p>
+                 </div>
+             </div>
+        </section>
+
+        <!-- 3. Expanded Risk Mitigation -->
+        <section id="risks" class="section-card p-8 mb-8">
+            <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">Expanded Risk & Mitigation Plan</h2>
+            <div class="space-y-6">
+                <div class="p-4 bg-red-50 rounded-lg">
+                    <h3 class="font-bold text-xl text-red-800">RISK: Immigration Denial (Mexican Citizen)</h3>
+                    <p><strong class="text-green-700">MITIGATION:</strong> This is the 'project killer'. Do not spend any money on property search trips or legal fees for property until you have a written, approved visa or a very high degree of confidence from an immigration lawyer. The entire project hinges on this.</p>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg">
+                    <h3 class="font-bold text-xl text-yellow-800">RISK: Budget Overruns & Island Logistics</h3>
+                    <p><strong class="text-green-700">MITIGATION:</strong> Island construction is more expensive. Materials arrive by ferry, and contractor availability is limited. Get island-specific quotes. Your contingency fund should be closer to 30%. Build a strong relationship with a local project manager.</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h3 class="font-bold text-xl text-blue-800">RISK: Cultural & Social Isolation</h3>
+                    <p><strong class="text-green-700">MITIGATION:</strong> Small island communities are tight-knit. Your arrival will be noticed. Visit multiple times, especially during a wet, windy winter. Talk to locals. Understand the social dynamics. Are you ready for stormy days when the ferry doesn't run?</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. The Roadmap -->
+        <section id="roadmap" class="section-card p-8 mb-8">
+            <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">Our Roadmap to Accomplishment</h2>
+            <div class="relative pl-12">
+                <!-- Phases remain the same -->
+                 <div class="roadmap-item">
+                    <div class="roadmap-dot">1</div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-emerald-700">Phase 1: Research & Legal Foundations</h3>
+                        <p class="text-gray-600">The groundwork. We focus on immigration clarity and financial planning before anything else. This is the most critical phase.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-dot">2</div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-emerald-700">Phase 2: Exploration & Property Search</h3>
+                        <p class="text-gray-600">The exciting part! We visit Ireland, explore different islands, and begin the active hunt for our future home.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-dot">3</div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-emerald-700">Phase 3: Purchase & Grant Application</h3>
+                        <p class="text-gray-600">Making it official. We secure the property, navigate the legal process of buying, and immediately apply for the renovation grant.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-dot">4</div>
+                    <div class="ml-4">
+                        <h3 class="text-2xl font-bold text-emerald-700">Phase 4: Renovation & Relocation</h3>
+                        <p class="text-gray-600">The transformation. We manage the renovation project and plan the final logistics for our big move to the island.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Interactive Checklist -->
+        <section id="checklist" class="section-card p-8 mb-8">
+            <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">Our Interactive Progress Tracker</h2>
+            <p class="mb-6">Here is our step-by-step checklist. Click the status buttons to track our progress together!</p>
+            <div class="space-y-6" id="checklist-container">
+                <!-- Checklist items will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- 6. Useful Resources -->
+        <section id="resources" class="section-card p-8">
+            <h2 class="text-3xl font-bold text-emerald-800 border-b-4 border-amber-400 pb-2 mb-4">Essential Resources & Links</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="https://www.gov.ie/en/policy-information/4d872-our-living-islands/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>Official 'Our Living Islands' Policy</strong><p class="text-sm">The primary source from the Irish Government.</p></a>
+                <a href="https://www.citizensinformation.ie/en/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>Citizens Information Ireland</strong><p class="text-sm">For impartial info on rights and services.</p></a>
+                <a href="https://www.irishimmigration.ie/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>Irish Immigration Service</strong><p class="text-sm">The official source for all visa information.</p></a>
+                <a href="https://www.lawsociety.ie/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>The Law Society of Ireland</strong><p class="text-sm">To find registered solicitors and immigration lawyers.</p></a>
+                <a href="https://www.daft.ie/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>Daft.ie</strong><p class="text-sm">Ireland's main property search website.</p></a>
+                <a href="https://www.myhome.ie/" target="_blank" class="block p-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition"><strong>MyHome.ie</strong><p class="text-sm">Another major property portal.</p></a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center p-6 mt-8 bg-gray-200">
+        <p>Made with excitement for our future adventure. Sláinte!</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const tasks = [
+                { phase: 1, owner: 'Mexican Citizen', text: 'Schedule consultations with 2-3 Irish immigration lawyers.', status: 'pending' },
+                { phase: 1, owner: 'Mexican Citizen', text: 'Thoroughly review visa options and eligibility on irishimmigration.ie.', status: 'pending' },
+                { phase: 1, owner: 'Both', text: 'Create a detailed, shared budget spreadsheet (property, renovation, fees, 30% contingency).', status: 'pending' },
+                { phase: 1, owner: 'Both', text: 'Research specific islands: ferry schedules, amenities, broadband quality.', status: 'pending' },
+                { phase: 1, owner: 'German Citizen', text: 'Gather documents for Irish bank account opening (proof of address, ID).', status: 'pending' },
+                { phase: 1, owner: 'Mexican Citizen', text: 'Submit formal visa application based on lawyer\'s advice.', status: 'pending' },
+
+                { phase: 2, owner: 'Both', text: 'Plan and book an off-season (winter) exploration trip to Ireland.', status: 'pending' },
+                { phase: 2, owner: 'Both', text: 'Create a property viewing "scorecard" with our priorities.', status: 'pending' },
+                { phase: 2, owner: 'Both', text: 'During trip: Meet estate agents and speak with locals on chosen islands.', status: 'pending' },
+                { phase: 2, owner: 'Both', text: 'Identify a potential property and take extensive photos/videos.', status: 'pending' },
+                
+                { phase: 3, owner: 'Both', text: 'Engage an Irish solicitor (conveyancer) for property purchase.', status: 'pending' },
+                { phase: 3, owner: 'Both', text: 'Get a full structural survey conducted on the chosen property.', status: 'pending' },
+                { phase: 3, owner: 'Both', text: 'Go "Sale Agreed" and pay the booking deposit.', status: 'pending' },
+                { phase: 3, owner: 'Both', text: 'Sign contracts and complete property purchase.', status: 'pending' },
+                { phase: 3, owner: 'Both', text: 'Compile grant application with proof of vacancy, ownership, and quotes from contractors.', status: 'pending' },
+
+                { phase: 4, owner: 'Both', text: 'Finalize contracts with builders/architects.', status: 'pending' },
+                { phase: 4, owner: 'Both', text: 'Set up utilities (electricity, broadband) for the property.', status: 'pending' },
+                { phase: 4, owner: 'German Citizen', text: 'Apply for PPS Number and register with local GP.', status: 'pending' },
+                { phase: 4, owner: 'Both', text: 'Plan international shipping and moving logistics.', status: 'pending' },
+                { phase: 4, owner: 'Both', text: 'Complete renovation and move into our new Irish island home!', status: 'pending' },
+            ];
+
+            const container = document.getElementById('checklist-container');
+            let currentPhase = 0;
+
+            tasks.forEach((task, index) => {
+                if (task.phase !== currentPhase) {
+                    currentPhase = task.phase;
+                    const phaseHeader = document.createElement('h3');
+                    phaseHeader.className = 'text-2xl font-bold mt-8 mb-2 text-emerald-600';
+                    phaseHeader.textContent = `Phase ${currentPhase}: ${getPhaseName(currentPhase)}`;
+                    container.appendChild(phaseHeader);
+                }
+
+                const taskEl = document.createElement('div');
+                taskEl.className = 'task-item flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-gray-50 rounded-lg border';
+                taskEl.dataset.index = index;
+
+                const textDiv = document.createElement('div');
+                const ownerSpan = document.createElement('span');
+                ownerSpan.className = `font-bold mr-2 ${task.owner === 'Mexican Citizen' ? 'text-red-700' : task.owner === 'German Citizen' ? 'text-blue-700' : 'text-gray-800'}`;
+                ownerSpan.textContent = `[${task.owner}]`;
+                
+                const textSpan = document.createElement('span');
+                textSpan.textContent = ` ${task.text}`;
+                
+                textDiv.appendChild(ownerSpan);
+                textDiv.appendChild(textSpan);
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'flex items-center space-x-2 mt-3 sm:mt-0 flex-shrink-0';
+                
+                const statuses = ['pending', 'process', 'done'];
+                statuses.forEach(status => {
+                    const btn = document.createElement('button');
+                    btn.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+                    btn.className = `status-btn status-${status}`;
+                    if (task.status === status) {
+                        btn.style.fontWeight = 'bold';
+                        btn.style.transform = 'scale(1.1)';
+                    }
+                    btn.dataset.status = status;
+                    statusDiv.appendChild(btn);
+                });
+
+                taskEl.appendChild(textDiv);
+                taskEl.appendChild(statusDiv);
+                container.appendChild(taskEl);
+                
+                updateTaskVisuals(taskEl, task.status);
+            });
+
+            container.addEventListener('click', function(e) {
+                if (e.target.matches('.status-btn')) {
+                    const taskEl = e.target.closest('.task-item');
+                    const index = parseInt(taskEl.dataset.index);
+                    const newStatus = e.target.dataset.status;
+                    
+                    tasks[index].status = newStatus;
+                    updateTaskVisuals(taskEl, newStatus);
+                }
+            });
+
+            function updateTaskVisuals(taskEl, status) {
+                 if (status === 'done') {
+                    taskEl.classList.add('done');
+                } else {
+                    taskEl.classList.remove('done');
+                }
+                
+                const buttons = taskEl.querySelectorAll('.status-btn');
+                buttons.forEach(btn => {
+                    if (btn.dataset.status === status) {
+                        btn.style.fontWeight = 'bold';
+                        btn.style.transform = 'scale(1.1)';
+                        btn.style.opacity = '1';
+                    } else {
+                        btn.style.fontWeight = 'normal';
+                        btn.style.transform = 'scale(1)';
+                        btn.style.opacity = '0.7';
+                    }
+                });
+            }
+
+            function getPhaseName(phase) {
+                switch(phase) {
+                    case 1: return 'Research & Legal Foundations';
+                    case 2: return 'Exploration & Property Search';
+                    case 3: return 'Purchase & Grant Application';
+                    case 4: return 'Renovation & Relocation';
+                    default: return '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
